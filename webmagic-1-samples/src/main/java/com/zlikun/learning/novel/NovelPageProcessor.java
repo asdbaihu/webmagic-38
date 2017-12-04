@@ -1,4 +1,4 @@
-package com.zlikun.learning.noval;
+package com.zlikun.learning.novel;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

@@ -1,5 +1,6 @@
-package com.zlikun.learning.noval;
+package com.zlikun.learning.novel;
 
+import com.zlikun.learning.dao.NovelDao;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import us.codecraft.webmagic.ResultItems;
@@ -27,11 +28,7 @@ public class CustomPipeline implements Pipeline {
         String title = items.get("title");
         String content = items.get("content");
 
-        try {
-            FileUtils.write(new File("D:\\Temp\\novel\\" + number + ".txt"), title + "\r\n\r\n" + content, "UTF-8");
-        } catch (IOException e) {
-            log.error("持久化数据到文件出错!", e);
-        }
+        NovelDao.getInstance().save("诸天纪", number, title, content);
 
     }
 }

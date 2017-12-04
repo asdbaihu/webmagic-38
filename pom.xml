@@ -12,6 +12,7 @@
 
     <modules>
         <module>webmagic-1-samples</module>
+        <module>webmagic-2-novels</module>
     </modules>
 
     <properties>
